@@ -39,8 +39,8 @@ header {
   }
 
   header .wrapper {
-    display: grid;
-    place-items: auto;
+    display: flex;
+    place-items: flex-start;
     flex-wrap: wrap;
   }
 }
