@@ -1,20 +1,37 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import { ref, onMounted } from 'vue'
 
-// reactive state
-const count = ref(0)
+// export default {
+//   data() {
+//     return {
+//       count: 1
+//     }
+//   },
+//   mounted() {
+//     // `this` refers to the component instance.
+//     console.log(this.count) // => 1
 
-// functions that mutate state and trigger updates
-function increment() {
-  count.value++
-}
+//     // data can be mutated as well
+//     this.count = 2
+//   }
+// }
+
+// import { ref, onMounted } from 'vue'
+
+// // reactive state
+// const count = ref(0)
+
+// // functions that mutate state and trigger updates
+// function increment() {
+//   count.value++
+// }
 
 
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`)
-})
+// onMounted(() => {
+//   console.log(`The initial count is ${count.value}.`)
+// })
+console.log('dddd')
 </script>
 
 <template>
@@ -29,8 +46,9 @@ onMounted(() => {
 
   <main>
     <TheWelcome />
+    <!-- <div id="app1"><button @click="count++">{{ count }}</button></div>    -->
   </main>
-  <button @click="increment">Count is: {{ count }}</button>
+  <!-- <button @click="increment">Count is: {{ count }}</button> -->
 </template>
 
 <style scoped>
@@ -55,8 +73,8 @@ header {
   }
 
   header .wrapper {
-    display: grid;
-    place-items: auto;
+    display: flex;
+    place-items: flex-start;
     flex-wrap: wrap;
   }
 }
